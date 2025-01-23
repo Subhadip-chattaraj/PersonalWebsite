@@ -1,0 +1,382 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f0f4fe;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 2em 10%;
+    text-align: center;
+}
+
+/* About section styling */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about-content img {
+    width: 500px; /* Adjust size as needed */
+    height: 500px;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensures the image fills the circle */
+}
+
+.about-content p {
+    flex: 1;
+    font-size: 1.2em;
+    max-width: 600px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-content img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-content p {
+        text-align: center;
+    }
+}
+
+.project-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.project-card {
+    background-color: white;
+    padding: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    border-radius: 10px;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    padding: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 1em;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Add animations to sections */
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*Responsive*/
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-grid {
+        flex-direction: column;
+    }
+
+    .project-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .skills-list {
+        flex-direction: column;
+    }
+
+    form {
+        width: 90%;
+    }
+}
+
+/*Annimation*/
+
+/* Animated background for the About section */
+#about {
+    position: relative;
+    overflow: hidden;
+    color: rgb(26, 25, 25);
+    z-index: 1; /* To make sure content stays above the background */
+}
+
+#about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+    background-size: 300% 300%;
+    z-index: -1; /* Place the background behind the content */
+    animation: gradientAnimation 8s ease infinite;
+    opacity: 0.85; /* You can adjust this for more or less transparency */
+    transition: opacity 0.5s ease;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* About content styling */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px 0;
+}
+
+.about-content img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about-content p {
+    flex: 1;
+    font-size: 1.2em;
+    max-width: 600px;
+}
+
+/* Contact Section Styling */
+#contact {
+    position: relative;
+    padding: 100px 10%;
+    text-align: center;
+    color: white;
+}
+
+#contact h1 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #0a0a0a;
+}
+
+/* Contact Form Container */
+.contact-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Input field container */
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Input field styles */
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: rgb(4, 4, 4);
+    border-radius: 10px;
+    font-size: 1em;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Focus effect */
+.contact-form input:focus, .contact-form textarea:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Input field icons */
+.input-container i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 1.2em;
+}
+
+/* Submit button styles */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: #ff7e5f;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Submit button hover effect */
+.submit-btn:hover {
+    background: #feb47b;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Additional styling for transitions and responsive design */
+.contact-form input, .contact-form textarea {
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 20px;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-content img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-content p {
+        text-align: center;
+    }
+}
+
+
+#qualifications::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+    background-size: 300% 300%;
+    z-index: -1;
+    animation: backgroundAnimation 15s ease infinite;
+    opacity: 0.85; /* Adjust opacity for readability */
+}
+
+/* Animation keyframes for gradient effect */
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Section-specific styles */
+ #qualifications{
+    padding: 100px 10%;
+}
+
+/* Section content styling */
+.qualification-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .about-content,.qualification-list {
+        flex-direction: column;
+    }
+
+    .about-content img,.qualification-list img{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+

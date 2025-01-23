@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="logo">SUBHADIP CHATTARAJ</div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#qualifications">Qualifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+      <h1>About Me</h1>
+      <div class="about-content">
+        <img src="your-photo.jpg" alt="Your Photo" />
+        <p>
+          Hi, I'm Subhadip Chattaraj, a B.Tech in ECE student with a vibrant passion for crafting 
+          engaging web experiences. While my foundation lies in electronics, I've seamlessly 
+          blended my technical acumen with a love for coding. I'm proficient in C, Java, Python, 
+          and the foundational pillars of Data Structures and Algorithms. My web development toolkit 
+          includes HTML, CSS, JavaScript, and React, empowering me to build dynamic and user-centric
+          web applications. I'm eager to contribute my skills and enthusiasm to a challenging role 
+          where I can learn and grow alongside a talented team.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h1>Projects</h1>
+      <div class="project-grid">
+        <div class="project-card">
+          <h2>Movie recommendation system</h2>
+          <p>
+          Developed a movie recommendation system using collaborative filtering and content-based filtering techniques.
+            Key Features:
+            User-based and content-based filtering
+            Data preprocessing and analysis
+            Model evaluation using MAE and RMSE
+            Technologies: Python (Pandas, NumPy, Scikit-learn), MovieLens dataset
+            Skills Demonstrated: Data analysis, machine learning, model evaluation.
+          </p>
+        </div>
+        <div class="project-card">
+          <h2>Intelligent Personal Assistant</h2>
+          <p>Developed a voice-controlled assistant with capabilities like:
+
+            Natural Language Understanding: Processed and understood user commands.
+            Task Automation: Performed actions like setting alarms and scheduling appointments.
+            Information Retrieval: Answered questions and provided news updates.
+            Technologies: Python (SpeechRecognition, pyttsx3), NLP libraries (optional).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h1>Skills</h1>
+      <div class="skills-list">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+        <div class="skill">C</div>
+        <div class="skill">JAVA</div>
+        <div class="skill">PYTHON</div>
+      </div>
+    </section>
+
+    <!-- Qualifications Section -->
+    <section id="qualifications">
+      <h1>Qualifications</h1>
+      <p>Bachelor's of Technology In Electronics & Communication Engineering</p>
+      <p>Certified Full-Stack Developer</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h1>Contact Me</h1>
+      <div class="contact-container">
+        <form class="contact-form">
+          <div class="input-container">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <i class="fa fa-user"></i>
+          </div>
+          <div class="input-container">
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <i class="fa fa-envelope"></i>
+          </div>
+          <div class="input-container">
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <i class="fa fa-comment"></i>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </body>
+    
+</html>
