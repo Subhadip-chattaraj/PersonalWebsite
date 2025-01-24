@@ -88,31 +88,30 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+   <section id="contact">
       <h1>Contact Me</h1>
       <div class="contact-container">
-        <form class="contact-form">
-          <div class="input-container">
-            <input type="text" name="name" placeholder="Your Name" required />
-            <i class="fa fa-user"></i>
-          </div>
-          <div class="input-container">
-            <input
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+          <input type="hidden" name="access_key" value="db6d2577-cb8a-421f-bde7-85df1d57c22c">
+          <input class="input-container" type="text" name="name" placeholder="Your Name" required />
+          <input class="input-container"
               type="email"
               name="email"
               placeholder="Your Email"
               required
             />
-            <i class="fa fa-envelope"></i>
-          </div>
-          <div class="input-container">
-            <textarea
+            <textarea 
+            class="input-container"
               name="message"
               placeholder="Your Message"
               required
             ></textarea>
-            <i class="fa fa-comment"></i>
-          </div>
+            <!-- Honeypot Spam Protection -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+    <!-- Custom Confirmation / Success Page -->
+    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+
           <button type="submit" class="submit-btn">Send Message</button>
         </form>
       </div>
